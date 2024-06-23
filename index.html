@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsStudio</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body>
+    <nav>
+    <div  class="navbar  flex justify-around bg-blue-300 h-[95px] w-[100vw] shadow-[ 0 0 4px #bbd0e2] ">
+       <div class=" ml-[-4rem] flex justify-center items-center ">
+           <div class="logo h-[10rem] w-[10rem] " onclick="reload()">
+               <img class="mix-blend-color-burn" src="newsLogo.png" alt="">  
+            </div>
+        </div>
+        <div class="options flex justify-center items-center gap-10 font-medium text-lg ">
+            <ul id="ipl" onclick="onNavItemClick('ipl')"  class=" hover:text-blue-600 text-blue-950 cursor-pointer  focus:text-blue-600  ">IPL</ul>
+            <ul id="finance" onclick="onNavItemClick('finance')"   class="hover:text-blue-600  text-blue-950 cursor-pointer active:text-blue-600 ">Finance</ul>
+            <ul id="politics" onclick="onNavItemClick('politics')"   class="hover:text-blue-600 text-blue-950 cursor-pointer active:text-blue-600 ">Politics</ul>
+            <ul id="technology" onclick="onNavItemClick('technology')"   class="hover:text-blue-600 text-blue-950 cursor-pointer active:text-blue-600 ">Techonlogy</ul>
+        </div>
+        <div class="search flex justify-center items-center gap-5">
+            <input id="search-text" class="searchBox bg-white w-[12.5rem] rounded-md h-7 flex justify-start items-center px-3 border-[2px] outline-blue-800 cursor-pointer" placeholder="e.g Cricket" type="text">
+            <button id="search-button" class="searchButton bg-blue-700 text-white m-2 px-6 py-0.5 rounded-lg font-medium text-lg hover:bg-blue-800  cursor-pointer">Search</button>
+        </div>
+    </div>
+</nav>
+   
+
+  <main class="ml-[10rem] overflow-hidden   ">
+     
+        <div class="card-container flex flex-wrap  gap-10 items-start  mt-[70px]  ">
+          
+        </div>
+     
+  </main>
+
+
+  <template class="template-new-card  ">
+    <div class="card overflow-hidden ml-1 w-[350px] h-[400px] hover:bg-[#f9fdff] shadow-md transition-all duration-[0.3s] ease-in hover:transform translate-y[-2px] ">
+        <div class="card-header overflow-hidden rounded-md ">
+            <img id="news-img" class="object-cover h-[180px] w-[100%]" src="rohit.webp" alt="">
+        </div>
+        <div class="card-content  p-3">
+            <h3 id="news-title" class="news-tittle font-bold text-lg my-3">This is the Tittle</h3>
+            <h6 id="news-source" class="news-source font-medium"> End Gadget 26/02/2024</h6>
+            <p id="news-desc" class="news-desc my-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sapiente maiores a rerum, nobis esse ut soluta repellendus nemo exercitationem. Molestiae corrupti temporibus doloremque in?</p>
+        </div>
+    </div>
+  </template>
+    
+  <script src="script.js"></script> 
+</body>
+</html>
